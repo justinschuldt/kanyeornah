@@ -1,0 +1,10 @@
+<!--<h4>result start</h4>-->
+<div *ngIf="tweet">
+    <h1 *ngIf="tweet.source != 'Kanye West'">✖</h1>
+    <h1 *ngIf="tweet.source === 'Kanye West'">✔</h1>
+  <h2>{{tweet.body}}</h2>
+  <h3>{{tweet.source}}</h3>
+  <div>{{tweet.date}}</div>
+  <div>id: {{tweet.id}}</div>
+</div>
+<!--<h4>result end</h4>-->

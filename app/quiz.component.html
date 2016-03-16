@@ -1,0 +1,18 @@
+ <h1>{{title}}</h1>
+<h3>Quiz</h3>
+<div  *ngIf="!selectedTweet && !result" class="grid grid-pad">
+    <div (click)="startQuiz(tweets)" class="col-1-4" >
+        <div class="module tweet">
+            <h4>Begin</h4>
+        </div>
+    </div>
+</div>
+        
+        <tweet-detail [tweet]="selectedTweet">selectedTweet</tweet-detail>
+        <result [tweet]="result">result</result> 
+
+          <button *ngIf="selectedTweet" (click)="gotoResult(true, selectedTweet)">✔</button>
+          <button *ngIf="selectedTweet" (click)="gotoResult(false, selectedTweet)">✖</button>
+          <button *ngIf="result" (click)="next()">next</button>
+
+        
